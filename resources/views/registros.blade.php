@@ -24,16 +24,16 @@
           </button>
           <ul class="nav-menu">
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link nav-link">Usuarios</a>
+              <a href="{{url("/usuarios")}}" class="nav-menu-link nav-link">Usuarios</a>
             </li>
             <li class="nav-menu-item">
               <a href="#" class="nav-menu-link nav-link">Devoluciones</a>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link nav-link">Rentas</a>
+              <a href="{{url("/mostrar")}}" class="nav-menu-link nav-link">Rentas</a>
             </li>
             <li class="nav-menu-item">
-                <a href="#" class="nav-menu-link nav-link">Inventarios</a>
+                <a href="{{url("/inventarios")}}" class="nav-menu-link nav-link">Inventarios</a>
               </li>
               <!-- Añade más elementos aquí según sea necesario 
             <li class="nav-menu-item">

@@ -23,3 +23,19 @@ Route::get('/registros', function () {
     return view('registros');
 });
 
+Route::get('/agregarusuario', function () {
+    return view('agregarusuario');
+});
+
+
+Route::get('/agregarauto', function () {
+    return view('agregarauto');
+});
+
+Route::get('/usuarios/mostrar', function () {
+    return view('infousuario');
+});
+
+Route::get('/inventario/mostrar', function () {
+    return view('infoauto');
+});

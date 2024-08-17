@@ -1,0 +1,119 @@
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaf2f8; /* Fondo azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+}
+
+/* Estilo para la información del auto */
+.auto-info {
+    margin-bottom: 30px;
+}
+
+.auto-info h1 {
+    color: #003d7a; /* Azul oscuro */
+    border-bottom: 3px solid #007bff; /* Línea azul más brillante */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 28px; /* Tamaño de fuente más grande */
+}
+
+.auto-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+.auto-details strong {
+    color: #007bff; /* Azul brillante para etiquetas */
+}
+
+/* Estilo para el historial de rentas */
+.rental-history {
+    margin-top: 30px;
+}
+
+.rental-history h2 {
+    color: #003d7a; /* Azul oscuro */
+    border-bottom: 3px solid #007bff; /* Línea azul más brillante */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px; /* Tamaño de fuente para el título */
+}
+
+.rental-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rental-list li {
+    margin: 12px 0;
+}
+
+.rental-list a {
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    background-color: #007bff; /* Azul brillante */
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #0056b3; /* Borde azul oscuro */
+    transition: all 0.3s ease;
+}
+
+.rental-list a:hover {
+    background-color: #0056b3; /* Azul oscuro al pasar el cursor */
+    border-color: #003d7a; /* Borde más oscuro */
+    color: #eaf2f8; /* Texto azul claro */
+    transform: scale(1.02); /* Ligeramente más grande */
+}
+
+
+
+
+
+/*boton de salir*/
+
+/* Contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo del botón Salir */
+.btn-exit {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para los efectos hover */
+}
+
+.btn-exit:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.btn-exit:focus {
+    outline: none; /* Elimina el contorno por defecto del enfoque */
+}

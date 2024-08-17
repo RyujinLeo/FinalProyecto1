@@ -25,19 +25,19 @@
           </button>
           <ul class="nav-menu">
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link nav-link">Rentas</a>
+              <a href="{{url("/mostrar")}}" class="nav-menu-link nav-link">Rentas</a>
             </li>
             <li class="nav-menu-item">
               <a href="#" class="nav-menu-link nav-link">Devoluciones</a>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link nav-link">Registros</a>
+              <a href="{{url("/registros")}}" class="nav-menu-link nav-link">Registros</a>
             </li>
             <li class="nav-menu-item">
-                <a href="#" class="nav-menu-link nav-link">Usuarios</a>
+                <a href="{{url("/usuarios")}}" class="nav-menu-link nav-link">Usuarios</a>
               </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link nav-link nav-menu-link_active"
+              <a href="{{url("/agregarauto")}}" class="nav-menu-link nav-link nav-menu-link_active"
                 >Agregar auto</a
               >
             </li>
@@ -52,18 +52,18 @@
 
       <main>
         <section class="grid-container">
-            <!-- Añade más elementos aquí según sea necesario -->
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 2</div>
-            <div class="grid-item">Item 3</div>
-            <div class="grid-item">Item 4</div>
-            <div class="grid-item">Item 5</div>
-            <div class="grid-item">Item 6</div>
-            <div class="grid-item">Item 7</div>
-            <div class="grid-item">Item 8</div>
-            <div class="grid-item">Item 9</div>
-            <!-- Puedes seguir añadiendo más elementos -->
-        </section>
+          <!-- Añade más elementos aquí según sea necesario -->
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 1</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 2</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 3</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 4</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 5</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 6</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 7</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 8</a>
+          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 9</a>
+          <!-- Puedes seguir añadiendo más elementos -->
+      </section>
       </main>
 
 
