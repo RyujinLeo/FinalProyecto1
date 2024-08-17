@@ -1,0 +1,145 @@
+
+
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9eff3; /* Fondo gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal del recibo */
+.receipt-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el recibo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para el número de recibo */
+.receipt-number {
+    text-align: center;
+    border-bottom: 3px solid #007bff; /* Línea azul brillante */
+    padding-bottom: 10px;
+}
+
+.receipt-number h2 {
+    color: #003d7a; /* Azul oscuro */
+    font-size: 30px; /* Tamaño grande para destacar */
+    margin: 0;
+}
+
+.receipt-number a {
+    color: #003d7a; /* Azul oscuro */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+.receipt-number a:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Estilo para la información del arrendatario */
+.tenant-info {
+    width: 100%;
+}
+
+.tenant-info h1 {
+    color: #003d7a; /* Azul oscuro */
+    border-bottom: 3px solid #007bff; /* Línea azul brillante */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.tenant-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.tenant-info strong {
+    color: #007bff; /* Azul brillante para etiquetas */
+}
+
+.tenant-info a {
+    color: #007bff; /* Azul brillante para enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+.tenant-info a:hover {
+    color: #003d7a; /* Azul oscuro al pasar el cursor */
+}
+
+/* Estilo para la información del auto */
+.car-info {
+    width: 100%;
+}
+
+.car-info h1 {
+    color: #003d7a; /* Azul oscuro */
+    border-bottom: 3px solid #007bff; /* Línea azul brillante */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.car-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.car-info strong {
+    color: #007bff; /* Azul brillante para etiquetas */
+}
+
+.car-info a {
+    color: #007bff; /* Azul brillante para enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+.car-info a:hover {
+    color: #003d7a; /* Azul oscuro al pasar el cursor */
+}
+
+
+
+/*boton de salir*/
+
+/* Contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo del botón Salir */
+.btn-exit {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para los efectos hover */
+}
+
+.btn-exit:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.btn-exit:focus {
+    outline: none; /* Elimina el contorno por defecto del enfoque */
+}

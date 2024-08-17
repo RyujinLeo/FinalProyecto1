@@ -39,3 +39,8 @@ Route::get('/usuarios/mostrar', function () {
 Route::get('/inventario/mostrar', function () {
     return view('infoauto');
 });
+
+
+Route::get('/registros/mostrar', function () {
+    return view('factura');
+});
