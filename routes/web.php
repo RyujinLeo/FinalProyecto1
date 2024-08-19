@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\RegistrosController;
+use App\Http\Controllers\RentasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,6 +13,8 @@ Route::get('/', function () {
 Route::get('/mostrar', function () {
     return view('Principal');
 });
+Route::get('/RENTAS/mostrar/todos', [InventariosController::class, 'mostrarCarros'])->name('mostrar.autosrenta');
+
 
 Route::get('/usuarios', function () {
     return view('usuarios');

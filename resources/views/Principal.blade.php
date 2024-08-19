@@ -53,15 +53,17 @@
       <main>
         <section class="grid-container">
             <!-- Añade más elementos aquí según sea necesario -->
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 2</div>
-            <div class="grid-item">Item 3</div>
-            <div class="grid-item">Item 4</div>
-            <div class="grid-item">Item 5</div>
-            <div class="grid-item">Item 6</div>
-            <div class="grid-item">Item 7</div>
-            <div class="grid-item">Item 8</div>
-            <div class="grid-item">Item 9</div>
+           @if(isset($Cardatos) && !empty($Cardatos))
+                    @foreach($Cardatos as $vehiculo)
+                    <a href="{{url("/inventario/mostrar/{$carro->vin}")}}" class="grid-item"><p>nombre:{{$carro->marca}}</p>
+                      <p>apellido:{{$carro->modelo}}</p>
+                      <p>correo:{{$carro->disponibilidad}}</p>
+                      <p>correo:{{$carro->precioDiario}}</p>
+                    </a>
+                    @endforeach
+        @else
+            <p>No se encontraron vehículos en el inventario.</p>
+        @endif
             <!-- Puedes seguir añadiendo más elementos -->
         </section>
       </main>
