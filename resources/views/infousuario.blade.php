@@ -20,6 +20,7 @@
             <p><strong>Fecha de registro:</strong> {{$Useridencontrado->fechaRegistro}}</p>
         </div>
     
+    </div>
         <div class="transactions">
             <h2>Listado de Transacciones</h2>
             <ul class="transaction-list">
