@@ -58,11 +58,11 @@ class UsuarioController extends Controller
 
         $data=[
             'idCliente' =>$request->idusuario,
-            'nombre' =>$request->name,
+            'nombre' =>$request->nombre,
             'apellido' =>$request->apellido,
-            'email' =>$request->idusuario,
+            'email' =>$request->email,
             'direccion' =>$request->direccion,
-            'telefono' =>$request->apellido,
+            'telefono' =>$request->telefono,
             'fechaRegistro' =>$today,
         ];
 
