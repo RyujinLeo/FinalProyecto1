@@ -10,31 +10,44 @@
 <body>
 
     <div class="form-container">
-        <form >
+        <form action="{{route('guardar.auto')}}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="text">Vin:</label>
+                <input type="text" id="vin" name="vin" required>
+            </div>
+            <div class="form-group">
+                <label for="text">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
+            <div class="form-group">
+                <label for="text">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
             </div>
             <div class="form-group">
                 <label for="text">Año:</label>
-                <input type="text" id="fecha" name="fecha" required>
+                <input type="text" id="anio" name="anio" required>
+            </div>
+          
+            <div class="form-group">
+                <label for="text">Color:</label>
+                <input type="text" id="color" name="color" required>
             </div>
             <div class="form-group">
-                <label for="text">Tipo de auto:</label>
-                <input type="text" id="tipoauto" name="tipoauto" required>
+                <label for="text">disponibilidad:</label>
+                <input type="text" id="disponibilidad" name="disponibilidad" required>
             </div>
             <div class="form-group">
-                <label for="text">kilometraje:</label>
-                <input type="text" id="kilometraje" name="kilometraje" required>
+                <label for="text">precio Diario:</label>
+                <input type="text" id="precioDiario" name="precioDiario" required>
             </div>
             <div class="form-group">
-                <label for="text">Placa:</label>
-                <input type="text" id="placa" name="placa" required>
+                <label for="text">idCiudad:</label>
+                <input type="text" id="idCiudad" name="idCiudad" required>
             </div>
             <div class="form-group">
-                <label for="text">ciudad:</label>
-                <input type="text" id="ciudad" name="ciudad" required>
+                <label for="text">imagenauto:</label>
+                <input type="text" id="imagenAuto" name="imagenAuto" required>
             </div>
             <button type="submit">Guardar</button>
         </form>

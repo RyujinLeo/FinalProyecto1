@@ -39,3 +39,7 @@
   .form-group {
     display: flex;
 }
+
+div#formcontenedor.form-group {
+  display: flex;
+}

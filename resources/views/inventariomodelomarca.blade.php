@@ -63,10 +63,10 @@
         <section class="grid-container">
           <!-- Añade más elementos aquí según sea necesario -->
           @foreach ($Modelomarcaencontrado as $listamodelomarca)
-          <a href="{{url("/inventario/mostrar/{$listamodelomarca->marca}")}}" class="grid-item"><p>nombre:{{$listamodelomarca->marca}}</p>
-            <p>apellido:{{$listamodelomarca->modelo}}</p>
-            <p>correo:{{$listamodelomarca->disponibilidad}}</p>
-            <p>correo:{{$listamodelomarca->precioDiario}}</p>
+          <a href="{{url("/inventario/mostrar/{$listamodelomarca->marca}")}}" class="grid-item"><p>marca:{{$listamodelomarca->marca}}</p>
+            <p>modelo:{{$listamodelomarca->modelo}}</p>
+            <p>disponibilidad:{{$listamodelomarca->disponibilidad}}</p>
+            <p>precioDiario:{{$listamodelomarca->precioDiario}}</p>
           </a>
           <!-- Puedes seguir añadiendo más elementos -->
       </section>

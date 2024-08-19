@@ -93,6 +93,3 @@ body {
     outline: none; /* Elimina el contorno por defecto del enfoque */
 }
 
-div#formcontenedor {
-    display: flex;
-}

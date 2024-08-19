@@ -21,12 +21,18 @@ Route::get('/usuarios', function () {
 Route::get('/inventario', function () {
     return view('inventario');
 });
-Route::get('/inventario/mostrar/todos', [InventariosController::class, 'mostrarautos'])->name('mostrar.autos');
+Route::get('/inventario/mostrar/todos', [InventariosController::class, 'mostrarCarros'])->name('mostrar.autos');
 
 Route::post('/inventario/buscar/modelomarca', [InventariosController::class, 'modelomarca'])->name('buscar.modelomarca');
 
+Route::get('/agregarauto', function () {
+    return view('agregarauto');
+});
+
+Route::post('/agregarauto/guardar', [InventariosController::class, 'crearAuto'])->name('guardar.auto');
 
 
+/**registros crud */
 Route::get('/registros', function () {
     return view('registros');
 });
@@ -35,10 +41,6 @@ Route::post('/registros/buscar/fechas', [RegistrosController::class, 'buscarporf
 
 
 
-
-Route::get('/agregarauto', function () {
-    return view('agregarauto');
-});
 
 /*rutas de usuarios API CRUD */
 Route::get('/usuarios/mostrar', [UsuarioController::class, 'mostrarUsuarios'])->name('mostrar.usuarios');

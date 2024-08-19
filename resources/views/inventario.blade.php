@@ -62,17 +62,20 @@
       <main>
         <section class="grid-container">
           <!-- Añade más elementos aquí según sea necesario -->
-          @foreach ($Carrosdatos as $carro)
-          <a href="{{url("/inventario/mostrar/{$carro->marca}")}}" class="grid-item"><p>nombre:{{$carro->marca}}</p>
-            <p>apellido:{{$carro->modelo}}</p>
-            <p>correo:{{$carro->disponibilidad}}</p>
-            <p>correo:{{$carro->precioDiario}}</p>
-          </a>
+
+          @if(isset($Cardatos) && !empty($Cardatos))
+                    @foreach($Cardatos as $vehiculo)
+                    <a href="{{url("/inventario/mostrar/{$carro->vin}")}}" class="grid-item"><p>nombre:{{$carro->marca}}</p>
+                      <p>apellido:{{$carro->modelo}}</p>
+                      <p>correo:{{$carro->disponibilidad}}</p>
+                      <p>correo:{{$carro->precioDiario}}</p>
+                    </a>
+                    @endforeach
+        @else
+            <p>No se encontraron vehículos en el inventario.</p>
+        @endif
           <!-- Puedes seguir añadiendo más elementos -->
       </section>
       </main>
-
-
-
 </body>
 </html>

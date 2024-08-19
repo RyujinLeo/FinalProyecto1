@@ -46,7 +46,7 @@
           <div class="search-container">
             <form id="formbusqueda" action="{{ route('buscar.registros') }}" method="POST" >
               @csrf
-            <div class="form-group">
+            <div id="formcontenedor" class="form-group">
               <input type="text" placeholder="Fecha inicio" aria-label="Buscar" id="fechaInicio" name="fechaInicio" required>
               <input type="text" placeholder="Fecha Fin" aria-label="Buscar" id="fechaFin" name="fechaFin" required>
               <button type="submit" aria-label="Buscar">Buscar</button>

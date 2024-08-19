@@ -10,9 +10,9 @@ use Carbon\Carbon;
 
 class RegistrosController extends Controller
 {
-    public function mostrarUsuarios(){
+    public function mostrarRegistros(){
         $client= new Client();
-        $response = $client->request ('GET','http://localhost:8091/api/rentacar/clientes/mostrar/todos/clientes');
+        $response = $client->request ('GET','nosecual es el endpoint de esto o no esta');
         $Registros = json_decode($response->getBody()->getContents());
         return view('registros',compact('Registros'));
     }
