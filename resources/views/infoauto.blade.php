@@ -42,6 +42,10 @@
         <button class="btn-exit" onclick="window.location.href='{{ url('/mostrar') }}';">Salir</button>
     </div>
 
+    <div class="button-container">
+        <button class="btn-exit" onclick="window.location.href='{{ url('/renta') }}';">Rentar</button>
+    </div>
+
 
 </body>
 </html>
