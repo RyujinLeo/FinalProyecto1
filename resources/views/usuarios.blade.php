@@ -47,7 +47,7 @@
             <form id="formbusqueda" action="{{ route('buscar.usuarios') }}" method="POST" >
               @csrf
             <div class="form-group">
-              <input type="text" placeholder="Buscar..." aria-label="Buscar" id="idusuario" name="idusuario" required>
+              <input type="text" placeholder="Buscar por Codigo..." aria-label="Buscar" id="idusuario" name="idusuario" required>
               <button type="submit" aria-label="Buscar">Buscar</button>
             </div>
              
@@ -62,7 +62,9 @@
         <section class="grid-container">
             <!-- Añade más elementos aquí según sea necesario -->
             @foreach ($Usersdatos as $cliente)
-            <a href="{{url("/usuarios/mostrar/{$cliente->idCliente}")}}" class="grid-item"><p>nombre:{{$cliente->nombre}}</p>
+            <a href="{{url("/usuarios/mostrar/{$cliente->idCliente}")}}" class="grid-item">
+              <p>Codigo de Cliente:{{$cliente->idCliente}}</p>
+              <p>nombre:{{$cliente->nombre}}</p>
               <p>apellido:{{$cliente->apellido}}</p>
               <p>correo:{{$cliente->email}}</p>
             

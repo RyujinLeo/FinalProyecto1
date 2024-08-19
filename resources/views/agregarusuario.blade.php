@@ -8,38 +8,35 @@
     <title>Agregar usuario</title>
 </head> 
 <body>
-
     <div class="form-container">
-        <form action="{{route('guardar.usuario')}}" method="POST">
+        <form action="{{ route('guardar.usuario') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="idusuario">Idusuario:</label>
+                <label for="idusuario">Código de Usuario:</label>
                 <input type="text" id="idusuario" name="idusuario" required>
             </div>
-            
             <div class="form-group">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
-                <label for="text">Apellido:</label>
+                <label for="apellido">Apellido:</label>
                 <input type="text" id="apellido" name="apellido" required>
             </div>
             <div class="form-group">
                 <label for="email">Correo:</label>
-                <input type="email" id="correo" name="correo" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="direccion">Direccion:</label>
+                <label for="telefono">Teléfono:</label>
                 <input type="text" id="telefono" name="telefono" required>
             </div>
             <div class="form-group">
-                <label for="telefono">Telefono:</label>
+                <label for="direccion">Dirección:</label>
                 <input type="text" id="direccion" name="direccion" required>
             </div>
             <button type="submit">Guardar</button>
         </form>
     </div>
-    
 </body>
 </html>

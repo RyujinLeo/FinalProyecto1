@@ -62,7 +62,6 @@
       <main>
         <section class="grid-container">
           <!-- Añade más elementos aquí según sea necesario -->
-
           @if(isset($Cardatos) && !empty($Cardatos))
                     @foreach($Cardatos as $vehiculo)
                     <a href="{{url("/inventario/mostrar/{$vehiculo['vin']}")}}" class="grid-item"><p>Marca:{{$vehiculo['marca']}}</p>
@@ -74,7 +73,6 @@
                       @endif
                       <p>Precio Diario:{{$vehiculo['precioDiario']}}</p>
                       <img src={{$vehiculo['imagenAuto']}} alt="Imagen Auto" style="width: 200px; height: auto;">
-
                     @endforeach
         @else
             <p>No se encontraron vehículos en el inventario.</p>

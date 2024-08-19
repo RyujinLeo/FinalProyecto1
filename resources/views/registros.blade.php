@@ -59,15 +59,14 @@
       <main>
         <section class="grid-container">
           <!-- Añade más elementos aquí según sea necesario -->
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 1</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 2</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 3</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 4</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 5</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 6</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 7</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 8</a>
-          <a href="{{url("/registros/mostrar")}}" class="grid-item">Item 9</a>
+          @foreach($alquilerDTOs as $alquilerDTO)
+            <a href="{{  url("/registros/mostrar/alquiler/{$alquilerDTO->alquiler->idAlquiler}/{$alquilerDTO->idCliente}/{$alquilerDTO->vehiculo->vin}")  }}" class="grid-item">
+              <p>Codigo de Alquiler: {{$alquilerDTO->alquiler->idAlquiler}}</p>
+              <p>Codigo de Usuario abonado: {{$alquilerDTO->idCliente}}</p>
+              <p>Fecha de Inicio: {{$alquilerDTO->alquiler->fechaInicio}}</p>
+              <p>Fecha Final: {{$alquilerDTO->alquiler->fechaFin}}</p>
+            </a>
+          @endforeach
           <!-- Puedes seguir añadiendo más elementos -->
       </section>
       </main>
