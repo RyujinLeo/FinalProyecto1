@@ -23,7 +23,7 @@
           </button>
           <ul class="nav-menu">
             <li class="nav-menu-item">
-              <a href="{{url("/usuarios")}}" class="nav-menu-link nav-link">Usuarios</a>
+              <a href="{{url("/usuarios/mostrar")}}" class="nav-menu-link nav-link">Usuarios</a>
             </li>
             <li class="nav-menu-item">
               <a href="#" class="nav-menu-link nav-link">Devoluciones</a>

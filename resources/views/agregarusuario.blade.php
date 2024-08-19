@@ -10,8 +10,13 @@
 <body>
 
     <div class="form-container">
-        <form >
+        <form action="{{route('guardar.usuario')}}" method="POST">
             @csrf
+            <div class="form-group">
+                <label for="idusuario">Idusuario:</label>
+                <input type="text" id="idusuario" name="idusuario" required>
+            </div>
+            
             <div class="form-group">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
@@ -25,12 +30,12 @@
                 <input type="email" id="correo" name="correo" required>
             </div>
             <div class="form-group">
-                <label for="telefono">Telefono:</label>
+                <label for="direccion">Direccion:</label>
                 <input type="text" id="telefono" name="telefono" required>
             </div>
             <div class="form-group">
-                <label for="identidad">Identidad:</label>
-                <input type="text" id="identidad" name="identidad" required>
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="direccion" name="direccion" required>
             </div>
             <button type="submit">Guardar</button>
         </form>

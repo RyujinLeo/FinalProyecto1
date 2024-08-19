@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f2f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #007bff;
+}
+
+/* Estilos del encabezado */
+.container h1 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de los elementos del formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #f0f8ff;
+    color: #007bff;
+    box-sizing: border-box;
+    cursor: not-allowed; /* No se puede editar el campo */
+}
+
+.form-group input[readonly] {
+    background-color: #e9f2f9;
+    color: #555;
+}
+
+.form-group input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+
+
+/*boton de salir*/
+
+/* Contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo del botón Salir */
+.btn-exit {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para los efectos hover */
+}
+
+.btn-exit:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.btn-exit:focus {
+    outline: none; /* Elimina el contorno por defecto del enfoque */
+}
+
+div#formcontenedor {
+    display: flex;
+}

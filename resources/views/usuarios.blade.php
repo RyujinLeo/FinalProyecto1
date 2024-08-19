@@ -42,9 +42,17 @@
               >
             </li>
           </ul>
+          
           <div class="search-container">
-            <input type="text" placeholder="Buscar..." aria-label="Buscar">
-            <button type="button" aria-label="Buscar">Buscar</button>
+            <form id="formbusqueda" action="{{ route('buscar.usuarios') }}" method="POST" >
+              @csrf
+            <div class="form-group">
+              <input type="text" placeholder="Buscar..." aria-label="Buscar" id="idusuario" name="idusuario" required>
+              <button type="submit" aria-label="Buscar">Buscar</button>
+            </div>
+             
+          </form>
+  
         </div>
         </nav>
       </header>
@@ -53,15 +61,13 @@
       <main>
         <section class="grid-container">
             <!-- Añade más elementos aquí según sea necesario -->
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 1</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 2</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 3</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 4</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 5</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 6</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 7</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 8</a>
-            <a href="{{url("/usuarios/mostrar")}}" class="grid-item">Item 9</a>
+            @foreach ($Usersdatos as $cliente)
+            <a href="{{url("/usuarios/mostrar/{$cliente->idCliente}")}}" class="grid-item"><p>nombre:{{$cliente->nombre}}</p>
+              <p>apellido:{{$cliente->apellido}}</p>
+              <p>correo:{{$cliente->email}}</p>
+            
+            </a>
+            @endforeach
             <!-- Puedes seguir añadiendo más elementos -->
         </section>
       </main>

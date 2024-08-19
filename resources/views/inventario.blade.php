@@ -34,7 +34,7 @@
               <a href="{{url("/registros")}}" class="nav-menu-link nav-link">Registros</a>
             </li>
             <li class="nav-menu-item">
-                <a href="{{url("/usuarios")}}" class="nav-menu-link nav-link">Usuarios</a>
+                <a href="{{url("/usuarios/mostrar")}}" class="nav-menu-link nav-link">Usuarios</a>
               </li>
             <li class="nav-menu-item">
               <a href="{{url("/agregarauto")}}" class="nav-menu-link nav-link nav-menu-link_active"
@@ -42,9 +42,18 @@
               >
             </li>
           </ul>
+
           <div class="search-container">
-            <input type="text" placeholder="Buscar..." aria-label="Buscar">
-            <button type="button" aria-label="Buscar">Buscar</button>
+
+            <form id="formbusqueda" action="{{ route('buscar.modelomarca') }}" method="POST" >
+              @csrf
+            <div class="form-group">
+              <input type="text" placeholder="Buscar..." aria-label="Buscar" id="modelomarca" name="modelomarca" required>
+              <button type="submit" aria-label="Buscar">Buscar</button>
+            </div>
+             
+          </form>
+
         </div>
         </nav>
       </header>
@@ -53,15 +62,12 @@
       <main>
         <section class="grid-container">
           <!-- Añade más elementos aquí según sea necesario -->
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 1</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 2</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 3</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 4</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 5</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 6</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 7</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 8</a>
-          <a href="{{url("/inventario/mostrar")}}" class="grid-item">Item 9</a>
+          @foreach ($Carrosdatos as $carro)
+          <a href="{{url("/inventario/mostrar/{$carro->marca}")}}" class="grid-item"><p>nombre:{{$carro->marca}}</p>
+            <p>apellido:{{$carro->modelo}}</p>
+            <p>correo:{{$carro->disponibilidad}}</p>
+            <p>correo:{{$carro->precioDiario}}</p>
+          </a>
           <!-- Puedes seguir añadiendo más elementos -->
       </section>
       </main>

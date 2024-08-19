@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{url("/css/estiloinfousuario.css")}}">
-    <title>Document</title>
+    <title>Usuario</title>
 </head>
 <body>
     <div class="container">
@@ -13,11 +13,11 @@
     
         <div class="client-info">
             <h2>Detalles del Cliente</h2>
-            <p><strong>Nombre:</strong> Juan</p>
-            <p><strong>Apellido:</strong> Pérez</p>
-            <p><strong>Correo:</strong> juan.perez@example.com</p>
-            <p><strong>Teléfono:</strong> +1234567890</p>
-            <p><strong>Identidad:</strong> 1234567890</p>
+            <p><strong>Nombre:</strong> {{$Useridencontrado->nombre}}</p>
+            <p><strong>Apellido:</strong> {{$Useridencontrado->apellido}}</p>
+            <p><strong>Correo:</strong> {{$Useridencontrado->email}}</p>
+            <p><strong>Teléfono:</strong>{{$Useridencontrado->telefono}}</p>
+            <p><strong>Fecha de registro:</strong> {{$Useridencontrado->fechaRegistro}}</p>
         </div>
     
         <div class="transactions">
