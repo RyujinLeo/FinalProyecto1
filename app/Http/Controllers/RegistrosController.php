@@ -41,21 +41,24 @@ class RegistrosController extends Controller
         $request->validate([
             'fechaInicio' => 'required|string',
             'fechaFin' => 'required|string',
-        ]);
-
-        $client = new Client();
-
-        
+        ]);  
         try {
-        $fechaInicio = $request->input('fechaInicio');
-        $fechaFin = $request->input('fechaFin');
-
-        $response = $client->request('GET', "http://localhost:8091/api/rentacar/clientes/registro/venta?fechaInicio={$fechaInicio}&fechaFin={$fechaFin}");
-       
-        $URegistros = json_decode($response->getBody()->getContents());
-
-        return view('registroporfechas', compact('URegistros'));
-        }catch(RequestException $e) {
+            $fechaInicio = $request->input('fechaInicio');
+            $fechaFin = $request->input('fechaFin');
+    
+            $client = new Client();
+            $response = $client->request('GET', 'http://localhost:8091/api/rentacar/clientes/registro/venta', [
+                'query' => [
+                    'fechaInicio' => $fechaInicio,
+                    'fechaFin' => $fechaFin
+                ]
+            ]);
+    
+            $alquilerDTOs = json_decode($response->getBody()->getContents());
+    
+            return view('registrosfechas', compact('alquilerDTOs'));
+    
+        } catch (RequestException $e) {
             return redirect()->back()->with('error', 'No se pudo encontrar el cliente.');
         }
     }
