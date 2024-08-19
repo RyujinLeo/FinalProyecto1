@@ -13,7 +13,7 @@ Route::get('/', function () {
 Route::get('/mostrar', function () {
     return view('Principal');
 });
-Route::get('/RENTAS/mostrar/todos', [InventariosController::class, 'mostrarCarros'])->name('mostrar.autosrenta');
+Route::get('/RENTAS/mostrar/todos', [InventarioController::class, 'mostrarCarros'])->name('mostrar.autosrenta');
 
 
 Route::get('/usuarios', function () {
@@ -21,18 +21,16 @@ Route::get('/usuarios', function () {
 });
 
 /**inventarios y crud de los carros */
-Route::get('/inventario', function () {
-    return view('inventario');
-});
-Route::get('/inventario/mostrar/todos', [InventariosController::class, 'mostrarCarros'])->name('mostrar.autos');
+Route::get('/inventario', [InventarioController::class, 'mostrarCarros']);
+Route::get('/inventario/mostrar/todos', [InventarioController::class, 'mostrarCarros'])->name('mostrar.autos');
 
-Route::post('/inventario/buscar/modelomarca', [InventariosController::class, 'modelomarca'])->name('buscar.modelomarca');
+Route::post('/inventario/buscar/modelomarca', [InventarioController::class, 'modelomarca'])->name('buscar.modelomarca');
 
 Route::get('/agregarauto', function () {
     return view('agregarauto');
 });
 
-Route::post('/agregarauto/guardar', [InventariosController::class, 'crearAuto'])->name('guardar.auto');
+Route::post('/agregarauto/guardar', [InventarioController::class, 'crearAuto'])->name('guardar.auto');
 
 
 /**registros crud */
@@ -59,9 +57,7 @@ Route::post('/usuarios/mostrar', [UsuarioController::class, 'crearUsuario'])->na
 
 
 
-Route::get('/inventario/mostrar', function () {
-    return view('infoauto');
-});
+Route::get('/inventario/mostrar/{vin}', [InventarioController::class, 'buscarautoid'] );
 
 
 Route::get('/registros/mostrar', function () {

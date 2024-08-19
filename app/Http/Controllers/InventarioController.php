@@ -11,6 +11,7 @@ use Carbon\Carbon;
 class InventarioController extends Controller
 {
     public function mostrarCarros(){
+        $client = new Client();
         try {
             // Configura la solicitud GET a la API externa
             $response = $client->request('GET', 'http://localhost:8091/api/rentacar/vehiculos/mostrar/vehiculos');
@@ -31,6 +32,17 @@ class InventarioController extends Controller
             // Maneja los errores de la solicitud
             return view('inventario')->with('error', 'Error al obtener los datos de vehículos.');
         }
+    }
+
+    public function buscarautoid($id){
+        $clientmostrar= new Client(['base_uri'=>'http://localhost:8091/api/rentacar/vehiculos/buscar/',]);
+        $responsemotrar = $clientmostrar->request ('GET', "id/{$id}" );
+        $ciudadDTO = json_decode($responsemotrar->getBody()->getContents());
+        $autoEncontrado = $ciudadDTO->vehiculo;  // Objeto Vehiculo
+        $ciudadEncontrada = $ciudadDTO->nombre;  // Nombre de la ciudad
+
+
+        return view('infoauto', compact('autoEncontrado','ciudadEncontrada'));
     }
 
 
@@ -69,7 +81,6 @@ class InventarioController extends Controller
             'modelo' =>$request->modelo,
             'anio' =>$request->anio,
             'color' =>$request->color,
-            'disponibilidad' =>$request->disponibilidad,
             'precioDiario' =>$request->precioDiario,
             'idCiudad' => $request->idCiudad,
             'imagenAuto' =>$request->imagenAuto,

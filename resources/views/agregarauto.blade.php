@@ -13,7 +13,7 @@
         <form action="{{route('guardar.auto')}}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="text">Vin:</label>
+                <label for="text">Indentificardor de Vehiculo:</label>
                 <input type="text" id="vin" name="vin" required>
             </div>
             <div class="form-group">
@@ -34,19 +34,15 @@
                 <input type="text" id="color" name="color" required>
             </div>
             <div class="form-group">
-                <label for="text">disponibilidad:</label>
-                <input type="text" id="disponibilidad" name="disponibilidad" required>
-            </div>
-            <div class="form-group">
-                <label for="text">precio Diario:</label>
+                <label for="text">Precio Diario:</label>
                 <input type="text" id="precioDiario" name="precioDiario" required>
             </div>
             <div class="form-group">
-                <label for="text">idCiudad:</label>
+                <label for="text">Ciudad:</label>
                 <input type="text" id="idCiudad" name="idCiudad" required>
             </div>
             <div class="form-group">
-                <label for="text">imagenauto:</label>
+                <label for="text">Imagen:</label>
                 <input type="text" id="imagenAuto" name="imagenAuto" required>
             </div>
             <button type="submit">Guardar</button>

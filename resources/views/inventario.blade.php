@@ -65,11 +65,16 @@
 
           @if(isset($Cardatos) && !empty($Cardatos))
                     @foreach($Cardatos as $vehiculo)
-                    <a href="{{url("/inventario/mostrar/{$carro->vin}")}}" class="grid-item"><p>nombre:{{$carro->marca}}</p>
-                      <p>apellido:{{$carro->modelo}}</p>
-                      <p>correo:{{$carro->disponibilidad}}</p>
-                      <p>correo:{{$carro->precioDiario}}</p>
-                    </a>
+                    <a href="{{url("/inventario/mostrar/{$vehiculo['vin']}")}}" class="grid-item"><p>Marca:{{$vehiculo['marca']}}</p>
+                      <p>Modelo:{{$vehiculo['modelo']}}</p>
+                      @if($vehiculo["disponibilidad"] == 0)
+                        <p>Disponibilidad: En Uso</p>
+                      @else
+                        <p>Disponibilidad: Disponible</p>
+                      @endif
+                      <p>Precio Diario:{{$vehiculo['precioDiario']}}</p>
+                      <img src={{$vehiculo['imagenAuto']}} alt="Imagen Auto" style="width: 200px; height: auto;">
+
                     @endforeach
         @else
             <p>No se encontraron vehículos en el inventario.</p>

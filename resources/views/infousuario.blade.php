@@ -23,11 +23,13 @@
         <div class="transactions">
             <h2>Listado de Transacciones</h2>
             <ul class="transaction-list">
-                <li><a href="transaccion1.html">Transacción 1 - $100.00 <span class="status completed">Completada</span></a></li>
-                <li><a href="transaccion2.html">Transacción 2 - $250.00 <span class="status pending">Pendiente</span></a></li>
-                <li><a href="transaccion3.html">Transacción 3 - $75.00 <span class="status pending">Pendiente</span></a></li>
-                <li><a href="transaccion4.html">Transacción 4 - $200.00 <span class="status completed">Completada</span></a></li>
-                <li><a href="transaccion5.html">Transacción 5 - $50.00 <span class="status pending">Pendiente</span></a></li>
+                @foreach($Useridencontrado->alquiler as $arquiler)
+                    @if($arquiler->pago->estadoPago == 0)
+                        <li><a>Transacción {{ json_encode($arquiler->pago->fechaPago) }}  - {{ json_encode($arquiler->costoTotal) }} <span class="status pending">Pendiente</span></a></li>
+                    @else
+                        <li><a>Transacción {{ json_encode($arquiler->pago->fechaPago) }} - {{ json_encode($arquiler->costoTotal) }} <span class="status completed">Completada</span></a></li>
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>
